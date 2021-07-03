@@ -1,6 +1,22 @@
 import React from 'react';
-import BuildRoundedIcon from '@material-ui/icons/BuildRounded';
 import './App.css';
+import BuildRoundedIcon from '@material-ui/icons/BuildRounded';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+function AppRouter() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/.env" render={() => (window.location.href = "https://youtu.be/dQw4w9WgXcQ")} />
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
+  );
+}
 
 function App() {
   return (
@@ -25,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRouter;
